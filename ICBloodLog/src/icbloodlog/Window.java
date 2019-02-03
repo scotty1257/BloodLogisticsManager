@@ -406,7 +406,7 @@ public class Window extends javax.swing.JFrame {
         int y = 200;
         //*/
         
-        DecimalFormat df = new DecimalFormat("#0.0#");
+        DecimalFormat round = new DecimalFormat("#0.0#");
 
         Hospital[] check = new Hospital[3]; // number of hospitals in range, initiatilzed at 0 for placeholder.
         check[0] = new Hospital("East Alabama Health Center", 100, 200);
@@ -466,6 +466,8 @@ public class Window extends javax.swing.JFrame {
         
         double totalpcent = apospcent + anegpcent + bpospcent + bnegpcent + abpospcent + abnegpcent + opospcent + onegpcent;
         
+        DecimalFormat df = new DecimalFormat("#0.0#");
+        
         double totalPercentH1 = (check[0].getBlood().get("A+") 
                 + (check[0].getBlood().get("A-"))
                 +(check[0].getBlood().get("B+"))
@@ -499,9 +501,96 @@ public class Window extends javax.swing.JFrame {
         
         double H3out = (totalPercentH3 / pintsSum)*100;
         
-        rw.hosp1.setText(H1out + "% " + "Match to Need");
-        rw.hosp2.setText(H2out + "% " + "Match to Need");
-        rw.hosp3.setText(H3out + "% " + "Match to Need");
+        String h1err = "Hospital is insufficient with blood types : ";
+        
+            if (check[0].getBlood().get("A-") < aneg) {
+                h1err += "A-, "; 
+            }
+            if (check[0].getBlood().get("A+") < apos) {
+                h1err += "A+, "; 
+            }
+            if (check[0].getBlood().get("AB+") < abpos) {
+                h1err += "AB+, "; 
+            }
+            if (check[0].getBlood().get("AB-") < abneg) {
+                h1err += "AB-, "; 
+            }
+            if (check[0].getBlood().get("B+") < bpos) {
+                h1err += "B+, "; 
+            }
+            if (check[0].getBlood().get("B-") < bneg) {
+                h1err += "B-, "; 
+            }
+            if (check[0].getBlood().get("O+") < opos) {
+                h1err += "O+, "; 
+            }
+            if (check[0].getBlood().get("O-") < oneg) {
+                h1err += "O-, "; 
+            }
+        
+        
+        String h2err = "Hospital is insufficient with blood types : ";
+        
+            if (check[1].getBlood().get("A-") < aneg) {
+                h2err += "A-, "; 
+            }
+            if (check[1].getBlood().get("A+") < apos) {
+                h2err += "A+, "; 
+            }
+            if (check[1].getBlood().get("AB+") < abpos) {
+                h2err += "AB+, "; 
+            }
+            if (check[1].getBlood().get("AB-") < abneg) {
+                h2err += "AB-, "; 
+            }
+            if (check[1].getBlood().get("B+") < bpos) {
+                h2err += "B+, "; 
+            }
+            if (check[1].getBlood().get("B-") < bneg) {
+                h2err += "B-, "; 
+            }
+            if (check[1].getBlood().get("O+") < opos) {
+                h2err += "O+, "; 
+            }
+            if (check[1].getBlood().get("O-") < oneg) {
+                h2err += "O-, "; 
+            }
+        
+        
+        String h3err = "Hospital is insufficient with blood types : ";
+        
+            if (check[2].getBlood().get("A-") < aneg) {
+                h3err += "A-, "; 
+            }
+            if (check[2].getBlood().get("A+") < apos) {
+                h3err += "A+, "; 
+            }
+            if (check[2].getBlood().get("AB+") < abpos) {
+                h3err += "AB+, "; 
+            }
+            if (check[2].getBlood().get("AB-") < abneg) {
+                h3err += "AB-, "; 
+            }
+            if (check[2].getBlood().get("B+") < bpos) {
+                h3err += "B+, "; 
+            }
+            if (check[2].getBlood().get("B-") < bneg) {
+                h3err += "B-, "; 
+            }
+            if (check[2].getBlood().get("O+") < opos) {
+                h3err += "O+, "; 
+            }
+            if (check[2].getBlood().get("O-") < oneg) {
+                h3err += "O-, "; 
+            }
+        
+        rw.hosp1.setText(round.format(H1out) + "% " + "Match to Need");
+        rw.hosp1err.setText(h1err);
+        rw.hosp2.setText(round.format(H2out) + "% " + "Match to Need");
+        rw.hosp2err.setText(h2err);
+        rw.hosp3.setText(round.format(H3out) + "% " + "Match to Need");
+        rw.hosp3err.setText(h3err);
+        
         rw.setVisible(true);
         /*
         try {

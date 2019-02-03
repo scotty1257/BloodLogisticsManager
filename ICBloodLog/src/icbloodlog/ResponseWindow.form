@@ -46,22 +46,29 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="221" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="120" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="hosp2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="hosp3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="hosp1" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton1" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" pref="221" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="120" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="hosp2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hosp3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="hosp1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jButton1" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jButton2" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jButton3" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="hosp3err" alignment="1" max="32767" attributes="0"/>
+                          <Component id="hosp2err" alignment="1" max="32767" attributes="0"/>
+                          <Component id="hosp1err" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
@@ -80,19 +87,25 @@
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="hosp1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="hosp1err" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="hosp2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="hosp2err" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="hosp3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="hosp3err" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="jLabel6" min="-2" pref="31" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" pref="31" max="-2" attributes="0"/>
@@ -266,6 +279,30 @@
           <Font name="Corbel" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="_ % Match to Need"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hosp1err">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel8"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hosp2err">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel9"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hosp3err">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel10"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
